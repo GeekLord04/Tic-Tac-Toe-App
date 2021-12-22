@@ -4,39 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CFD2E4"
+    android:background="#2E343E"
     tools:context=".MainActivity">
 
     <!--title text-->
+
+    <!--image of the grid-->
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="56dp"
         android:text="Lets play Tic Tac Toe"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        app:fontFamily="cursive"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        app:fontFamily="sans-serif"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!--image of the grid-->
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="345dp"
+        android:layout_height="394dp"
+        android:layout_margin="30dp"
         android:contentDescription="Start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/newgrid" />
+        app:srcCompat="@drawable/grid" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="420dp"
+        android:layout_width="380dp"
+        android:layout_height="399dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
@@ -149,29 +151,33 @@
     </LinearLayout>
 
     <!--game status text display-->
+
     <TextView
         android:id="@+id/status"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="286dp"
+        android:layout_height="46dp"
         android:layout_marginBottom="15sp"
         android:text="Status"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:textColor="@color/white"
         android:textSize="28sp"
-        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.3" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="quit"
-        android:textStyle="bold|italic"
-        app:backgroundTint="@color/material_on_background_emphasis_high_type"
+        android:layout_width="139dp"
+        android:layout_height="55dp"
+        android:text="Reset"
+        android:fontFamily="sans-serif"
+        app:backgroundTint="#DD00AEFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/status"
+        app:layout_constraintStart_toStartOf="@+id/status"
         app:layout_constraintTop_toBottomOf="@+id/status" />
 
 

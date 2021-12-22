@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             // from 0 to 1 or 1 to 0
             if (activePlayer == 0) {
                 // set the image of x
-                img.setImageResource(R.drawable.newx);
+                img.setImageResource(R.drawable.cross);
                 activePlayer = 1;
                 TextView status = findViewById(R.id.status);
 
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 status.setText("O's Turn - Tap to play");
             } else {
                 // set the image of o
-                img.setImageResource(R.drawable.newo);
+                img.setImageResource(R.drawable.zero);
                 activePlayer = 0;
                 TextView status = findViewById(R.id.status);
 
@@ -144,14 +144,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
 
         button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
-                System.exit(0);
+                //finish();
+                gameReset(v);
+                //System.exit(0);
             }
         });
     }
